@@ -8,6 +8,7 @@ import { Login } from "../pages/Login";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import AccountService from "../api/AccountService";
 import "../css/Style.css";
+import "../css/profileMobile.css"
 export const Profile = () => {
     const [fullName, setFullname] = useState("");
     const [fullNameError, setFullnameError] = useState("");
@@ -67,7 +68,7 @@ export const Profile = () => {
                 <Meta title={"Profile"} />
                 <section className="cart-wrapper py-5">
                     <div className="col-12">
-                        <div className="container bg-white px-3 col-7 box">
+                        <div className="Profile container bg-white px-3 box">
                             <Link to="/"><FaArrowLeftLong size={20} className="mt-3 icon-profile" /></Link>
                             <div className="p-3 col-12">
                                 <h5 className="">Thông tin của bạn</h5>
@@ -75,17 +76,17 @@ export const Profile = () => {
                                 <div className="border-profile"></div>
                             </div>
 
-                            <div className="px-4 col-10">
+                            <div className="px-4 col-12">
                                 {/* Name start */}
                                 <div className="pb-3 col-12">
-                                    <label className="col-2"><strong>Tên:</strong></label>
+                                    <label className="col-3"><strong>Tên:</strong></label>
                                     <input
                                         disabled
                                         type="text"
                                         name="name"
                                         value={fullName}
                                         placeholder="Full name"
-                                        className="input-on-profile col-10"
+                                        className="input-on-profile col-7"
                                     />
                                     {fullNameError && (
                                         <p style={{ color: "red" }}>{fullNameError}</p>
@@ -95,14 +96,14 @@ export const Profile = () => {
 
                                 {/* Email start */}
                                 <div className="pb-3 col-12">
-                                    <label className="col-2"><strong>Email:</strong></label>
+                                    <label className="col-3"><strong>Email:</strong></label>
                                     <input
                                         disabled
                                         type="email"
                                         name="email"
                                         value={email}
                                         placeholder="Email"
-                                        className="input-on-profile col-10"
+                                        className="input-on-profile col-7"
                                     />
                                     {emailError && <p style={{ color: "red" }}>{emailError}</p>}
                                 </div>
@@ -110,7 +111,7 @@ export const Profile = () => {
 
                                 {/* Phone number start */}
                                 <div className="pb-3 col-12 d-flex">
-                                    <label className="col-2"><strong>Số điện thoại:</strong></label>
+                                    <label className="col-3"><strong>Số điện thoại:</strong></label>
                                     <input
                                         disabled
                                         type="number"
@@ -118,7 +119,7 @@ export const Profile = () => {
                                         id="hiddenNumber"
                                         value={phoneNum}
                                         placeholder="Phone number"
-                                        className="input-on-profile hiddenNumberInput"
+                                        className="input-on-profile hiddenNumberInput col-7"
                                     />
                                     {phoneNumError && (
                                         <p style={{ color: "red" }}>{phoneNumError}</p>

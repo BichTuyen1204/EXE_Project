@@ -5,6 +5,7 @@ import AccountService from "../api/AccountService.js";
 import { PopupCart } from "./PopupCart.js";
 import { PopuBuyNow } from "./PopupBuyNow.js";
 import "../css/Style.css";
+import "../css/productCartMobile.css"
 export const ProductCard = ({ listProduct }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState("");
@@ -129,9 +130,9 @@ export const ProductCard = ({ listProduct }) => {
 
   return (
     <div>
-      <div className="row">
+      <div className="productCart">
         {filteredProducts.map((product) => (
-          <div key={product.idBook} className="col-3 pb-3 pt-3">
+          <div key={product.idBook} className="productCartItem">
             <div
               className={`product-card ${
                 product.quantity === 0 ? "out-of-stock" : ""
@@ -160,18 +161,18 @@ export const ProductCard = ({ listProduct }) => {
                 </div>
 
                 <div className="product-details">
-                  <div className="mt-2">
+                  <div className="quantity-price mt-2">
                     <p className="price text-dark link">
                       Giá {product.price.toLocaleString()} VND
                     </p>
-                    <p className="link d-block">
+                    <p className="quantity link d-block">
                       <strong>Số lượng: </strong>
                       {product.quantity}
                     </p>
                   </div>
 
                    {/* Button start */}
-                   <div className="row-1 button-of-cart d-flex mb-3 justify-content-center">
+                   <div className="button-of-cart">
                    <button
                      className="button me-3"
                      type="submit"

@@ -1,0 +1,10 @@
+.Profile{
+    flex: 0 0 auto;
+    width: 58.33333333%;
+}
+@media screen and (max-width: 768px) {
+    .Profile{
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}

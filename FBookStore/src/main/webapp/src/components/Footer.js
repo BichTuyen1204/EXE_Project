@@ -4,19 +4,21 @@ import { IoHome } from "react-icons/io5";
 import { FaRegAddressBook } from "react-icons/fa";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { FaFacebook } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
 import { FaBuilding } from "react-icons/fa";
 import { SlEarphonesAlt } from "react-icons/sl";
 import { SiTiktok } from "react-icons/si";
 import { IoMail } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import "./header.css";
+import "./footerMobile.css"
 export const Footer = () => {
   return (
     <>
       <footer>
         <div className="footer-img">
-          <div className="footer-div py-3 pe-5">
-            <div className="col-5">
+          <div className="footer-div">
+            <div className="footerItem-1">
               <Link
                 to="/"
                 onClick={() => {
@@ -30,11 +32,21 @@ export const Footer = () => {
               >
                 <img src={Logo} />
               </Link>
+
               <div>
+                <p
+                  style={{
+                    fontSize: "30px",
+                    color: " rgb(83, 173, 101)",
+                    fontFamily: "math",
+                  }}
+                >
+                  <i> Tịnh Thực Thanh Khiết, Tâm An Thân Khỏe</i>
+                </p>
               </div>
             </div>
-            <div className="col-7 pt-5" style={{ display: "contents" }}>
-              <div className="social-links col-1 pt-5">
+            <div className="footerItem-2" style={{ display: "contents" }}>
+              <div className="social-links">
                 <div className="social-icons">
                   {/* Icon home start */}
                   <li>
@@ -135,7 +147,7 @@ export const Footer = () => {
                 <div class="address-links">
                   <li class="address1">
                     <FaBuilding className="m-2" />
-                    Tầng 7, Tòa Nhà Hạnh Phúc, CMT8
+                    14 Nguyễn Văn Cừ Nối Dài, Phường An Khánh, Ninh Kiều, Cần Thơ
                   </li>
                   <li className="address1">
                     <SlEarphonesAlt className="m-2" />

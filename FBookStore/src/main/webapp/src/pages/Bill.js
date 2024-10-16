@@ -172,7 +172,7 @@ export const Bill = () => {
                           </td>
                           <td className="text-center">{cartItem.quantity}</td>
                           <td className="text-center">
-                            {cartItem.product.price * cartItem.quantity}
+                            {(cartItem.product.price * cartItem.quantity).toLocaleString()}
                           </td>
                         </tr>
                       ))}
@@ -186,7 +186,7 @@ export const Bill = () => {
                       </p>
                     </div>
                       <div className="col-5 text-end">
-                        <h6>TỔNG: <strong>{total} VND</strong></h6>
+                        <h6>TỔNG: <strong>{total.toLocaleString()} VND</strong></h6>
                     </div>
                   </div>
                 </div>

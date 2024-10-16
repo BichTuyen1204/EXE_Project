@@ -15,7 +15,7 @@ import ProductService from "../api/ProductService.js";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import "../components/header.css";
 import { MdUpdate } from "react-icons/md";
-
+import "./headerMobile.css"
 export const Header = () => {
   const [jwtToken, setJwtToken] = useState(sessionStorage.getItem("jwtToken"));
   const [accountRole, setAccountRole] = useState("");
@@ -252,64 +252,10 @@ export const Header = () => {
 
   return (
     <header>
-      {/* Start new */}
-      <div className="header-upper container-xxl row align-items-center">
-        <nav class="navbar navbar-light bg-light">
-          <div class="container-fluid">
-            <div className="col-2">
-              <Link to="/" className="link-go-home">
-                <img src={Logo} className="logo col-12" />
-              </Link>
-            </div>
-            <div className="col-7">
-              <div className="input-group mb-8">
-                <form class="d-flex">
-                  <input
-                    type="text"
-                    className="form-control py-2"
-                    placeholder="Tìm kiếm sản phẩm tại đây..."
-                    aria-label="Tìm kiếm sản phẩm tại đây..."
-                    aria-describedby="basic-addon2"
-                    value={searchInput}
-                    onChange={handleInputChange}
-                    onKeyPress={handleKeyPress}
-                  />
-                  <span
-                    className="input-group-text p-3"
-                    id="basic-addon2"
-                    onClick={() => handleSearchProduct(searchInput)}
-                  >
-                    <BsSearch className="fs-6 icon-search" />
-                  </span>
-                </form>
-              </div>
-            </div>
-            <div class="dropdown nav-item dropdown">
-              <div className="col-3">
-                <div className="header-upper-links d-flex align-items-center justify-content-between">
-                  {/* Icon cart start */}
-                  {getCart()}
-                  {/* Icon cart end */}
-
-                  {/* Icon user start */}
-                  <div className="col-10">
-                    <div className="d-flex align-items-center gap-10 text-white">
-                      <div>{getUser()}</div>
-                    </div>
-                  </div>
-                  {/* Icon user end */}
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      {/* End new */}
       <div className="header-upper">
-        <div className="container-xxl">
+        <div className="header container-xxl">
           <div className="row align-items-center">
-            <div className="col-2">
+            <div className="logo col-2">
               <Link to="/" className="link-go-home">
                 <img src={Logo} className="logo col-12" />
               </Link>
@@ -356,30 +302,7 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Menu links end */}
-        <div className="menu-links ">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <div className="icon-home gap-10">
-              <AiFillHome className="icon-on-header-bottom mb-2" />
-              <Link to="/" className="link">
-                Trang Chủ
-              </Link>
-            </div>
 
-            <div className="icon-home">
-              <GiShop className="icon-on-header-bottom mb-2" />
-              <Link to="/product" className="link">
-                Cửa Hàng
-              </Link>
-            </div>
-            {getAdmin()}
-            {getContact()}
-            {getHisInvoice()}
-          </div>
-        </nav>
-</div>
-        {/**/}
         <div className="menu-links">
           <div className="">
             <div className="container  menu-bottom d-flex align-items-center gap-30 breadcrumb mb-0 py-2">

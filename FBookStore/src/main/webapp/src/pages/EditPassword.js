@@ -7,6 +7,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import AccountService from "../api/AccountService";
 import { Login } from "../pages/Login";
 import "../css/Style.css";
+import "../css/editPasswordMobile.css"
 export const EditPassword = () => {
 
   const [password, setPassword] = useState("");
@@ -186,7 +187,7 @@ export const EditPassword = () => {
         <div className="login-wrapper py-5">
           <div className="row">
             <div className="col-12">
-              <div className="auth-card box">
+              <div className="editPass box">
                 <h3 className="text-center mb-3">Thay đổi mật khẩu</h3>
                 <form action="" className="d-flex flex-column gap-15">
                   {/* Old password start */}
