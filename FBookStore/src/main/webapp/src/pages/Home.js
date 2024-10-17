@@ -11,6 +11,7 @@ import { ProductCard } from "./ProductCard";
 import ProductService from "../api/ProductService";
 import BannerService from '../api/BannerService';
 import "../css/Style.css"
+import "../css/homeMobile.css"
 export const Home = () => {
   const [currentImage, setCurrentImage] = useState();
   const [currentPage, setCurrentPage] = useState(1);
@@ -59,6 +60,7 @@ export const Home = () => {
 
 
   const getBanner = async () => {
+
     let tempBigBanners = [];
     let tempSlides = [];
     try {
@@ -78,6 +80,7 @@ export const Home = () => {
 
       setBigBanners(tempBigBanners);
       setSlides(tempSlides);
+
       for (let banner of data) {
         if (banner.type === "small-banner-1") {
           setBanner1(banner.image);
@@ -105,9 +108,9 @@ export const Home = () => {
       {/* Home-Wrapper-1 */}
       <section className="py-5">
         <div className="container-xxl">
-          <div className="row py-3">
+          <div className="mainbanner py-3">
             {/* Big image */}
-            <div className="col-6 box">
+            <div className="bigbanner box">
               <div className="main-banner position-relative slide-from-right">
                 <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
                   <div className="carousel-indicators">
@@ -148,7 +151,7 @@ export const Home = () => {
             </div>
 
             {/* Small image */}
-            <div className="col-6">
+            <div className="smallbanner col-6">
               <div className="d-flex flex-wrap gap-15 justify-content-between align-items-center">
                 <div className="small-banner position-relative">
                   <img src={`http://localhost:8090/${banner1}`} className="img-fluid rounded-3" />
@@ -178,7 +181,7 @@ export const Home = () => {
         <div className="container-xxl">
           <div className="col-12">
             <div className="servies d-flex align-items-center justify-content-between">
-              <div className="d-flex align-items-center gap-15">
+              <div className="servies-item align-items-center gap-15">
                 <BsTruck className="icon-home-wrapper-2" />
                 <div className="home-wrapper">
                   <h6>Miễn phí vận chuyển</h6>
@@ -186,7 +189,7 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="d-flex align-items-center gap-15">
+              <div className="servies-item align-items-center gap-15">
                 <SlPresent className="icon-home-wrapper-2" />
                 <div className="home-wrapper">
                   <h6>Ưu đãi bất ngờ</h6>
@@ -194,7 +197,7 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="d-flex align-items-center gap-15">
+              <div className="servies-item align-items-center gap-15">
                 <SlEarphonesAlt className="icon-home-wrapper-2" />
                 <div className="home-wrapper">
                   <h6>Hỗ trợ 24/7</h6>
@@ -202,7 +205,7 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="d-flex align-items-center gap-15">
+              <div className="servies-item align-items-center gap-15">
                 <FaRegCreditCard className="icon-home-wrapper-2" />
                 <div className="home-wrapper">
                   <h6>Giá cả phải chăng</h6>
@@ -210,7 +213,7 @@ export const Home = () => {
                 </div>
               </div>
 
-              <div className="d-flex align-items-center gap-15">
+              <div className="servies-item align-items-center gap-15">
                 <IoPricetagsSharp className="icon-home-wrapper-2" />
                 <div className="home-wrapper">
                   <h6>Thanh toán an toàn</h6>
@@ -221,6 +224,8 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
+
 
       {/* Card product */}
       <section className="featured-wrapper py-5 ">
@@ -292,7 +297,7 @@ export const Home = () => {
       </section>
 
       {/* Marque-wrapper */}
-      <section className="marque-wrapper py-5">
+      <section className="marque-wrapper  py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">

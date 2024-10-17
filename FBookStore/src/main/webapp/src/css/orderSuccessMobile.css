@@ -1,0 +1,23 @@
+.OrderSuccess {
+    width: 50%;
+}
+.button-order-success{
+    padding: .5rem
+}
+.btn-view{
+    padding: .5rem
+}
+.btn-back{
+    padding: .5rem
+}
+@media screen and (max-width: 768px){
+    .OrderSuccess {
+        width: 100%;
+        text-align: center;
+    }
+    .button-order-success{
+        display: inline;
+        margin-bottom: 10px;
+    }
+    
+}

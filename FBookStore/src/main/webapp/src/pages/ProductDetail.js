@@ -13,7 +13,7 @@ import { PopuBuyNow } from "./PopupBuyNow.js";
 import BannerService from "../api/BannerService";
 import { data } from "jquery";
 import "../css/Style.css";
-
+import "../css/productDetailMobile.css"
 export const ProductDetail = () => {
   const [product, setProduct] = useState("");
   const { idBook } = useParams();
@@ -179,10 +179,10 @@ export const ProductDetail = () => {
       <BreadCrumb title="Chi tiết sản phẩm" />
       <div>
         <div>
-          <div className="main-product-wrapper py-5">
+          <div className="main-product-wrapper">
             <div className="container-xxl">
-              <div className="row">
-                <div className="col-6">
+              <div className="productDetail">
+                <div className="productDetail-img">
                   <div className="main-product-details box">
                     <div className="productdisplay-left">
                       <div className="productdisplay-img image">
@@ -195,7 +195,7 @@ export const ProductDetail = () => {
                   </div>
                 </div>
 
-                <div className="col-6">
+                <div className="productDetail-content">
                   <div
                     className={`product-card ${
                       product.quantity === 0 ? "out-of-stock" : ""

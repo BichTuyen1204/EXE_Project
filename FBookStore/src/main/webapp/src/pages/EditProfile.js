@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { Login } from "../pages/Login";
 import "../css/Style.css";
+import "../css/editProfileMobile.css"
 import AccountService from "../api/AccountService";
 
 export const EditProfile = () => {
@@ -185,7 +186,7 @@ export const EditProfile = () => {
                 <div className="login-wrapper py-5 ">
                     <div className="row">
                         <div className="col-12">
-                            <div className="auth-card">
+                            <div className="editProfile">
                                 <h3 className="text-center mb-3">Chỉnh sửa thông tin</h3>
                                 <form action="" className="d-flex flex-column gap-15 box">
                                     {/* Full name */}

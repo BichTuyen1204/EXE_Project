@@ -1,0 +1,13 @@
+
+.editProfile {
+    padding: 20px;
+    background-color: white;
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+ @media screen and (max-width: 768px) {
+    .editProfile{
+        width: 100%;
+    }
+ }

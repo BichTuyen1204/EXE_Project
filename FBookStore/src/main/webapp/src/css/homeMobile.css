@@ -1,0 +1,33 @@
+  /* Home-Wrapper-1 */
+ .mainbanner{
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-top: var(--bs-gutter-y);
+    display: flex;
+    gap: 10px;
+ }
+  .bigbanner{
+    flex: 0 0 auto;
+    width: 50%;
+}
+  @media screen and (max-width: 768px) {
+    .smallbanner{
+        display: none;
+    }
+    .bigbanner{
+        width: 100%;
+    }
+}
+/* Home-Wrapper-2 */
+@media screen and (max-width: 768px) {
+   .servies{
+    flex-wrap: wrap;
+   }
+   .servies-item{
+    display: flex;
+    padding: 20px;
+   }
+}

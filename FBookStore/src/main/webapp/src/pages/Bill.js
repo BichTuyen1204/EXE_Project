@@ -7,6 +7,7 @@ import AccountService from "../api/AccountService.js";
 import InvoiceService from "../api/InvoiceService.js";
 import Logo from "../images/Logo.png";
 import "../css/Style.css";
+import "../css/billMobile.css";
 
 export const Bill = () => {
   const [jwtToken, setJwtToken] = useState(sessionStorage.getItem("jwtToken"));
@@ -118,38 +119,39 @@ export const Bill = () => {
                   </div>
                 </div>
                 {/* Header end */}
-                <div className="d-flex col-12">
-                  <div className="col-7 d-flex">
-                    <strong className="col-4">ID Bill :</strong>
-                    <p className="col-8">{invoiceId}</p>
+                <div>
+                  <div className="d-flex col-12">
+                    <div className="col-7 d-flex">
+                      <strong className="col-4">ID Bill :</strong>
+                      <p className="col-8">{invoiceId}</p>
+                    </div>
+                  </div>
+
+                  <div className="d-flex col-12">
+                    <div className="d-flex col-7">
+                      <strong className="col-4">Khách hàng :</strong>
+                      <p className="col-8">{invoiceName}</p>
+                    </div>
+                    <div className="col-1"></div>
+                    <div className="d-flex col-4">
+                      <strong className="col-3">Ngày :</strong>
+                      <p className="col-6">{invoiceDate}</p>
+                    </div>
+                  </div>
+                  <div className="d-flex col-12">
+                    <strong className="col-2">Địa chỉ :</strong>
+                    <p className="col-9">{invoiceAddress}</p>
                   </div>
                 </div>
 
-                <div className="d-flex col-12">
-                  <div className="d-flex col-7">
-                    <strong className="col-4">Khách hàng :</strong>
-                    <p className="col-8">{invoiceName}</p>
-                  </div>
-                  <div className="col-1"></div>
-                  <div className="d-flex col-4">
-                    <strong className="col-3">Ngày :</strong>
-                    <p className="col-6">{invoiceDate}</p>
-                  </div>
-                </div>
-                <div className="d-flex col-12">
-                  <strong className="col-2">Địa chỉ :</strong>
-                  <p className="col-9">{invoiceAddress}</p>
-                </div>
                 <div className="row cart-data-top">
                   {/* Table start */}
                   <table className="table col-12">
                     <thead>
                       <tr className="col-12">
-                        <th className="col-1" scope="col-1">
-                          SL.
-                        </th>
-                        <th className="col-5" scope="col-6">
-                          Tên sản phẩm
+                        <th className="col-1" scope="col-1"></th>
+                        <th className=" col-5" scope="col-6">
+                          Sản phẩm
                         </th>
                         <th className="col-2 text-center" scope="col-2">
                           Giá
@@ -165,14 +167,23 @@ export const Bill = () => {
                     <tbody>
                       {productsInInvoice.map((cartItem, index) => (
                         <tr key={index}>
-                          <th scope="row">{index + 1}</th>
+                          <th scope="row">
+                            <img
+                              src={`http://localhost:8090/${cartItem.product.image}`}
+                              alt={cartItem.name}
+                              width={90}
+                              height={110}
+                            />
+                          </th>
                           <td className="">{cartItem.product.title}</td>
                           <td className="text-center">
-                            {cartItem.product.price}
+                            {cartItem.product.price.toLocaleString()}
                           </td>
                           <td className="text-center">{cartItem.quantity}</td>
                           <td className="text-center">
-                            {cartItem.product.price * cartItem.quantity}
+                            {(
+                              cartItem.product.price * cartItem.quantity
+                            ).toLocaleString()}
                           </td>
                         </tr>
                       ))}
@@ -185,8 +196,10 @@ export const Bill = () => {
                         <strong> Cảm ơn bạn đã lựa chọn chúng tôi !</strong>
                       </p>
                     </div>
-                      <div className="col-5 text-end">
-                        <h6>TỔNG: <strong>{total} VND</strong></h6>
+                    <div className="col-5 text-end">
+                      <h6>
+                        TỔNG: <strong>{total.toLocaleString()} VND</strong>
+                      </h6>
                     </div>
                   </div>
                 </div>

@@ -5,7 +5,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { Login } from "../pages/Login";
 import AccountService from "../api/AccountService.js";
 import { CiCircleCheck } from "react-icons/ci";
-
+import "../css/orderSuccessMobile.css"
 export const OrderSuccess = () => {
     const [jwtToken, setJwtToken] = useState(sessionStorage.getItem('jwtToken'));
     const [numberOfBookInCart, setNumberOfBookInCart] = useState();
@@ -46,8 +46,8 @@ export const OrderSuccess = () => {
                 <BreadCrumb title="Order successful" />
                 <section className="cart-wrapper home-wrapper-2 py-5 px-5">
                     <div className="col-12">
-                        <div className="container bg-white col-6 position-relative">
-                            <div className="px-5 pt-3">
+                        <div className="OrderSuccess container bg-white position-relative">
+                            <div className=" pt-3">
                                 <div className="icon-container" >
                                     <CiCircleCheck size={55} />
                                 </div>
@@ -68,8 +68,8 @@ export const OrderSuccess = () => {
                                     </h7>
                                 </div>
 
-                                <div className="button-order-success mt-2 p-2">
-                                    <div className="p-2">
+                                <div className="button-order-success">
+                                    <div className="btn-view">
                                         <Link to={`/Bill/${invoiceId}`}>
                                             <button className="button-go-back px-4 py-1">
                                                 Xem đơn hàng
@@ -78,10 +78,10 @@ export const OrderSuccess = () => {
 
                                     </div>
 
-                                    <div className="p-2 button-view">
+                                    <div className="btn-back button-view">
                                         <Link to="/Product">
                                             <button className="btn-submit px-4 py-1">
-                                                Quay lại cửu hàng
+                                                Quay lại cửa hàng
                                             </button>
                                         </Link>
 
