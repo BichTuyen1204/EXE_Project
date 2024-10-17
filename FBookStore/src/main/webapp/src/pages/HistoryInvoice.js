@@ -9,8 +9,9 @@ import $ from "jquery";
 import "datatables.net-bs5";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AccountService from "../api/AccountService.js";
+import { Button } from "react-bootstrap";
 import InvoiceService from "../api/InvoiceService.js";
-import "../css/historyInvoiceMobile.css"
+import "../css/historyInvoiceMobile.css";
 
 export const HistoryInvoice = () => {
   const [jwtToken] = useState(sessionStorage.getItem("jwtToken"));
@@ -109,47 +110,61 @@ export const HistoryInvoice = () => {
               </div>
             </div>
           </div>
-
         </div>
         <section>
-        <div className="container-xxl bg-white p-5 box">
-          <div className="row">
-            <div className="col-12">
-              <table id="myDataTable" className="table table-striped">
-                <thead>
-                  <tr className="cart-header">
-                    <th className="col-2">Tên</th>
-                    <th className="col-5">Địa chỉ</th>
-                    <th className="col-1">Số điện thoại</th>
-                    <th className="col-1">Ngày mua</th>
-                    <th className="cart-col-2">Tổng</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {invoices.length === 0 ? (
-                    <tr>
-                      <td colSpan="5" className="text-center mt-5">
-                        Không có hóa đơn nào ở đây
-                      </td>
+          <div className="history container-xxl bg-white box">
+            <div className="row">
+              <div className="col-12">
+                <table id="myDataTable" className="table table-striped">
+                  <thead>
+                    <tr className="cart-header">
+                      <th className="col-2">Tên</th>
+                      <th className="col-4">Địa chỉ</th>
+                      <th className="col-1">Số điện thoại</th>
+                      <th className="col-1">Ngày mua</th>
+                      <th className="col-2">Tổng</th>
+                      <th className="cart-col-1">Chi tiết</th>
                     </tr>
-                  ) : (
-                    invoices.map((invoice, index) => (
-                      <tr key={index} className="border-bottom py-3 align-items-center">
-                        <td className="col-2">{invoice.account.name}</td>
-                        <td className="col-5">{invoice.shipAddress}</td>
-                        <td className="col-1">{invoice.account.phoneNumber}</td>
-                        <td className="col-1">{invoice.invoiceDate}</td>
-                        <td className="cart-col-2">{totalValue(invoice.invoiceItems)} VND</td>
+                  </thead>
+                  <tbody>
+                    {invoices.length === 0 ? (
+                      <tr>
+                        <td colSpan="5" className="text-center mt-5">
+                          Không có hóa đơn nào ở đây
+                        </td>
                       </tr>
-                    ))
-                  )}
-                </tbody>
-              </table>
+                    ) : (
+                      invoices.map((invoice, index) => (
+                        <tr
+                          key={index}
+                          className="border-bottom py-3 align-items-center"
+                        >
+                          <td className="col-2">{invoice.account.name}</td>
+                          <td className="col-4">{invoice.shipAddress}</td>
+                          <td className="col-1">
+                            {invoice.account.phoneNumber}
+                          </td>
+                          <td className="col-1">{invoice.invoiceDate}</td>
+                          <td className="col-2">
+                            {totalValue(invoice.invoiceItems).toLocaleString()}{" "}
+                            VND
+                          </td>
+                          <td className="col-1 ">
+                            <Link to={`/Bill/${invoice.invoiceID}`}>
+                              <Button className="button-view-continue">
+                                Chi tiết
+                              </Button>
+                            </Link>
+                          </td>
+                        </tr>
+                      ))
+                    )}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      
+        </section>
       </div>
     );
   } else {

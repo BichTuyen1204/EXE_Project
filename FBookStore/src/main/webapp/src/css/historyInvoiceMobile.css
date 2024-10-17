@@ -1,0 +1,38 @@
+section{
+    margin-bottom: 25px;
+}
+.history{
+    padding: 3rem;
+}
+.box {
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    body {
+        container-xxl: none
+    }
+    tr {
+    }
+    .container-xxl {
+      padding: 20px;
+    }
+    .box {
+      padding: 15px;
+      box-shadow: none;
+      border: none;
+    }
+    table {
+      font-size: 12px;
+      width: 100%;
+    }
+    .cart-header th {
+      font-size: 14px;
+    }
+    .cart-col-2 {
+      width: 100px;
+    }
+    .text-center {
+      font-size: 14px;
+    }
+  }
+  

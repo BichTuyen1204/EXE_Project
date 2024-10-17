@@ -1,0 +1,81 @@
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Adjust container width and padding */
+    .container {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    /* Logo adjustment */
+    .logo {
+      width: 60px;
+      height: auto;
+    }
+  
+    /* Invoice header */
+    .cart-wrapper {
+      padding: 20px;
+    }
+  
+    /* Table adjustments for better mobile view */
+    .table {
+      font-size: 12px;
+    }
+    .table th,
+    .table td {
+      padding: 8px;
+    }
+  
+    /* Responsive adjustments for the table columns */
+    .table th.col-1,
+    .table td.col-1 {
+      width: 10%;
+    }
+  
+    .table th.col-5,
+    .table td.col-5 {
+      width: 40%;
+    }
+  
+    .table th.col-2,
+    .table td.col-2 {
+      width: 25%;
+    }
+  
+    /* Make buttons full-width */
+    .btn-submit,
+    .button-go-back {
+      width: 100%;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  
+    /* Adjust footer alignment */
+    .fotter-bill {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    /* Hide non-essential columns */
+    .col-7,
+    .col-5 {
+      width: 100%;
+      padding: 0;
+    }
+  
+    /* Additional styling for text and headers */
+    h3,
+    h6 {
+      font-size: 18px;
+    }
+  
+    /* Align text in the center for mobile view */
+    .text-end {
+      text-align: center !important;
+    }
+  
+    .cart-data-top {
+      flex-direction: column;
+    }
+  }
+  
