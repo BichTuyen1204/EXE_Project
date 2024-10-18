@@ -120,9 +120,9 @@ export const HistoryInvoice = () => {
                     <tr className="cart-header">
                       <th className="col-2">Tên</th>
                       <th className="col-4">Địa chỉ</th>
-                      <th className="col-1">Số điện thoại</th>
+                      <th className="col-2">Số điện thoại</th>
                       <th className="col-1">Ngày mua</th>
-                      <th className="col-2">Tổng</th>
+                      <th className="col-1">Tổng</th>
                       <th className="cart-col-1">Chi tiết</th>
                     </tr>
                   </thead>

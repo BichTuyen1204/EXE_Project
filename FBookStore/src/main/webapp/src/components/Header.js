@@ -197,10 +197,12 @@ export const Header = () => {
       if (accountRole === "user") {
         return (
           <div className="icon-home">
-            <BsJournalCheck className="icon-on-header-bottom mb-2" />
-            <Link to={`/HistoryInvoice/${accountEmail}`} className="link">
-              Đơn Hàng
-            </Link>
+            <div className="icon-and-text-function">
+              <BsJournalCheck className="icon-on-header-bottom mb-2" />
+              <Link to={`/HistoryInvoice/${accountEmail}`} className="link">
+                Đơn Hàng
+              </Link>
+            </div>
           </div>
         );
       }
@@ -212,10 +214,12 @@ export const Header = () => {
       if (accountRole === "user") {
         return (
           <div className="icon-home">
-            <PiPhoneCallFill className="icon-on-header-bottom mb-2" />
-            <NavLink to="/Contact" className="link">
-              Liên hệ
-            </NavLink>
+            <div className="icon-and-text-function">
+              <PiPhoneCallFill className="icon-on-header-bottom mb-2" />
+              <NavLink to="/Contact" className="link">
+                Liên hệ
+              </NavLink>
+            </div>
           </div>
         );
       }
@@ -253,7 +257,7 @@ export const Header = () => {
   return (
     <header>
       <div className="header-upper">
-        <div className="header container-xxl">
+        <div className="header container-xl">
           <div className="row align-items-center">
             <div className="logo col-2">
               <Link to="/" className="link-go-home">
@@ -305,19 +309,23 @@ export const Header = () => {
 
         <div className="menu-links">
           <div className="">
-            <div className="container  menu-bottom d-flex align-items-center gap-30 breadcrumb mb-0 py-2">
+            <div className="container menu-bottom d-flex align-items-center gap-30 breadcrumb mb-0 py-2">
               <div className="icon-home gap-10">
-                <AiFillHome className="icon-on-header-bottom mb-2" />
-                <Link to="/" className="link">
-                  Trang Chủ
-                </Link>
+                <div className="icon-and-text-function">
+                  <AiFillHome className="icon-on-header-bottom mb-2" />
+                  <Link to="/" className="link">
+                    Trang Chủ
+                  </Link>
+                </div>
               </div>
 
               <div className="icon-home">
-                <GiShop className="icon-on-header-bottom mb-2" />
-                <Link to="/product" className="link">
-                  Cửa Hàng
-                </Link>
+                <div className="icon-and-text-function">
+                  <GiShop className="icon-on-header-bottom mb-2" />
+                  <Link to="/product" className="link">
+                    Cửa Hàng
+                  </Link>
+                </div>
               </div>
               {getAdmin()}
               {getContact()}

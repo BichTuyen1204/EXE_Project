@@ -22,6 +22,7 @@ export const CheckOut = () => {
   const [invoiceName, setInvoiceName] = useState("");
   const [invoiceEmail, setInvoiceEmail] = useState("");
   const [invoicePhone, setInvoicePhone] = useState("");
+  const [totalPrice, setTotalPrice] = useState(0.0);
   const [jwtToken, setJwtToken] = useState(sessionStorage.getItem("jwtToken"));
   const cities = data.data;
   const [city, setCity] = useState();
@@ -85,6 +86,10 @@ export const CheckOut = () => {
 
   const changePhoneNumber = (e) => {
     setInvoicePhone(e.target.value);
+  };
+
+  const changeTotalPrice = (e) => {
+    setTotalPrice(e.target.value);
   };
 
   const handleOpenOrderModal = () => {
@@ -247,7 +252,7 @@ export const CheckOut = () => {
       invoiceName,
       invoiceEmail,
       invoicePhone,
-      finalPrice,
+      totalPrice,
     };
     console.log(invoice);
     try {
@@ -265,7 +270,9 @@ export const CheckOut = () => {
     return accumulator + cartItem.product.price * cartItem.quantity;
   }, 0);
 
-  const finalPrice = total - discount;
+  useEffect(() => {
+    setTotalPrice(total - discount);
+  }, [total, discount]);
 
 
   // Total price end
@@ -575,7 +582,7 @@ export const CheckOut = () => {
                       <strong>Tổng tiền: </strong>
                     </h4>
                     <h5 className="total-price">
-                      <strong>{finalPrice.toLocaleString()} VND</strong>
+                      <strong>{totalPrice.toLocaleString()} VND</strong>
                     </h5>
                   </div>
 

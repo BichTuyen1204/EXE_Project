@@ -17,6 +17,7 @@ export const Bill = () => {
   const [invoiceName, setInvoiceName] = useState();
   const [invoiceAddress, setInvoiceAddress] = useState();
   const [invoiceDate, setInvoiceDate] = useState();
+  const [totalPrice, setTotalPrice] = useState();
   const [account, setAccount] = useState("");
   const [total, setTotal] = useState(0);
   const { invoiceId } = useParams();
@@ -49,6 +50,7 @@ export const Bill = () => {
       setInvoiceName(response.invoiceName);
       setInvoiceAddress(response.shipAddress);
       setInvoiceDate(response.invoiceDate);
+      setTotalPrice(response.totalPrice);
     } catch (error) {
       console.log("bug when log invoice", error);
     }
@@ -198,7 +200,7 @@ export const Bill = () => {
                     </div>
                     <div className="col-5 text-end">
                       <h6>
-                        TỔNG: <strong>{total.toLocaleString()} VND</strong>
+                        TỔNG: <strong>{totalPrice.toLocaleString()} VND</strong>
                       </h6>
                     </div>
                   </div>

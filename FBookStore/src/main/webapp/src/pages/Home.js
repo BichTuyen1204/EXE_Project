@@ -6,7 +6,6 @@ import { SlEarphonesAlt } from "react-icons/sl";
 import { FaRegCreditCard } from "react-icons/fa";
 import { IoPricetagsSharp } from "react-icons/io5";
 import Marquee from "react-fast-marquee";
-import { SpecialProduct } from "./SpecialProduct";
 import { ProductCard } from "./ProductCard";
 import ProductService from "../api/ProductService";
 import BannerService from '../api/BannerService';
@@ -60,13 +59,11 @@ export const Home = () => {
 
 
   const getBanner = async () => {
-
     let tempBigBanners = [];
     let tempSlides = [];
     try {
       const data = await BannerService.getAllBanner();
       console.log("banners", data);
-
       for (let banner of data) {
         if (banner.type === "big-banner") {
           tempBigBanners.push(banner);
@@ -80,7 +77,6 @@ export const Home = () => {
 
       setBigBanners(tempBigBanners);
       setSlides(tempSlides);
-
       for (let banner of data) {
         if (banner.type === "small-banner-1") {
           setBanner1(banner.image);
@@ -232,7 +228,7 @@ export const Home = () => {
         <div className="container-xxl">
           <div className="row box">
             <div className="col-12">
-              <h3 className="section-heading">Sản Phẩm Nổi Bật</h3>
+              <h3 className="section-heading pb-4 pt-2">Sản Phẩm Nổi Bật</h3>
             <ProductCard listProduct={products} />
 
             </div>

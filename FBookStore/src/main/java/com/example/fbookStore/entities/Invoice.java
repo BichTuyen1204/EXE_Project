@@ -28,11 +28,9 @@ public class Invoice {
     private String invoiceName;
     private String invoiceEmail;
     private String invoicePhone;
-
     private String shipAddress;
     private String paymentMethod;
     @OneToMany( mappedBy = "invoice",cascade = CascadeType.MERGE)
     private List<InvoiceItems> invoiceItems;
-
     private float totalPrice;
 }

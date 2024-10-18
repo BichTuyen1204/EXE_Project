@@ -96,9 +96,10 @@ export const Contact = () => {
                     <strong>Email: </strong> {accountEmail}
                     <br />
                     <strong>Số điện thoại: </strong> {accountPhone}
-                    <div className="input-comments-big">
+
+                    <div className="input-comments-big mt-3">
                       <strong>Có vấn đề gì hãy bình luận tại đây nhé!</strong>
-                      <textarea name='' id="" className='w-100 form-control input-comments-small box' cols="30" rows="4" placeholder='Bình luận tại đây...' onChange={(e) => setContent(e.target.value)}></textarea>
+                      <textarea name='' id="" className='mt-2 w-100 form-control input-comments-small box' cols="30" rows="4" placeholder='Bình luận tại đây...' onChange={(e) => setContent(e.target.value)}></textarea>
                     </div>
                     <div>
                       <button type="button" className='button' onClick={handleOnClick}>Gửi</button>
@@ -109,24 +110,20 @@ export const Contact = () => {
                   <h3 className='contact-title mb-4'>Hãy liên lạc với chúng tôi</h3>
                   <div>
                     <ul className='ps-0'>
-                      <li className='mb-3 d-flex gap-15 align-items-center icon-contact'>
+                      <li className='mb-2 d-flex gap-15 align-items-center icon-contact'>
                         <IoHome className='fs-5' />
-                        <address className='mb-0'>
-                          Cách Mạng Tháng 8, An Hòa, Ninh Kiều, Cần Thơ
+                        <address>
+                          14 Nguyễn Văn Cừ Nối Dài, Phường An Khánh, Ninh Kiều, Cần Thơ
                         </address>
                       </li>
                       <li className='mb-3 d-flex gap-15 align-items-center icon-contact'>
                         <FaPhone className='fs-5' />
-                        <a href='tel:84 99 99 99 99'>+84 99 99 99 99</a>
+                        <a className="link" href='tel:84 99 99 99 99'>+84 99 99 99 99</a>
                       </li>
                       <li className='mb-3 d-flex gap-15 align-items-center icon-contact'>
                         <IoMail className='fs-5' />
-                        <a href='mailto:FBookStore@gmail.com'>AnFoodStore@gmail.com</a>
+                        <a className="link" href='mailto:FBookStore@gmail.com'>AnFoodStore@gmail.com</a>
                       </li>
-                      {/*<li className='mb-3 d-flex gap-15 align-items-center icon-contact'>
-                        <MdInfo className='fs-5' />
-                        <p className='mb-0'>Monday - Sunday, 7AM - 9PM</p>
-                      </li>*/}
                     </ul>
                   </div>
                 </div>

@@ -283,7 +283,7 @@ export const ProductDetail = () => {
           <div className="description-wrapper">
             <div className="container-xxl">
               <div className="row">
-                <div className="col-12">
+                <div className="col-12 product-detail">
                   <h3>Chi Tiết Sản Phẩm</h3>
                   <div className="bg-white p-3 box">
                     {/* <p>{product.describle}</p> */}

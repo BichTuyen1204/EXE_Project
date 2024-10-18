@@ -7,7 +7,6 @@ export const PopupBlockCheckOut = (props) => {
     <div className='popup'>
         <div className='popup-inner'>
           <button className='close-btn button-of-popup' onClick={() => props.setTrigger(false)}><IoCloseOutline className='icon-of-popup' /></button>
-            
             { props.children }
         </div>
     </div>

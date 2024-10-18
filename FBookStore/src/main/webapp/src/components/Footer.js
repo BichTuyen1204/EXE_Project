@@ -32,18 +32,6 @@ export const Footer = () => {
               >
                 <img src={Logo} />
               </Link>
-
-              <div>
-                <p
-                  style={{
-                    fontSize: "30px",
-                    color: " rgb(83, 173, 101)",
-                    fontFamily: "math",
-                  }}
-                >
-                  <i> Tịnh Thực Thanh Khiết, Tâm An Thân Khỏe</i>
-                </p>
-              </div>
             </div>
             <div className="footerItem-2" style={{ display: "contents" }}>
               <div className="social-links">
@@ -108,12 +96,13 @@ export const Footer = () => {
                     </a>
                   </li>
                   {/* Icon contact end */}
+
                 </div>
               </div>
               <div className="col-1 pt-5"></div>
               <div className="social-links py-2">
                 <h4>
-                  <strong>Theo dõi chúng tôi</strong>
+                  <strong>Theo dõi</strong>
                 </h4>
                 <div className="social-icons">
                   <li>
@@ -131,12 +120,6 @@ export const Footer = () => {
                       TikTok
                     </a>
                   </li>
-                  {/*<li>
-                  <a href="#" className="icon-footer link">
-                    <GrInstagram className="m-2" />
-                    Instagram
-                  </a>
-                </li>*/}
                 </div>
               </div>
               <div className="col-1 pt-5"></div>

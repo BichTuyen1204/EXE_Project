@@ -31,6 +31,7 @@ body {
   font-family: "Rubik", sans-serif;
   overflow-x: hidden;
   background-color: var(--color-FFFFFF);
+  margin: 0;
 }
 
 a {
@@ -40,12 +41,13 @@ a {
 
 .link {
   text-decoration: none;
-  display: inline-block;
+  display: inline-block
 }
+
 .link:hover {
   text-decoration: none;
   display: inline-block;
-  color: #538641;
+  color: rgb(0, 137, 34);
 }
 
 .gap-5 {
@@ -157,7 +159,6 @@ input .form-control:focus {
 .icon-on-header-bottom{
   width: 35px;
   height: 25px;
-  color: #ffffff;
 }
 
 .header-bottom .menu-links a,
@@ -183,14 +184,6 @@ input .form-control:focus {
   background-color: #131921;
   width: 85%;
   transform: translate3d(0px, 57px, 0px);
-}
-
-.icon-home {
-  transition: all 0.2s;
-}
-
-.icon-home:hover {
-  transform: scaleX(0.95);
 }
 
 .dropdown-header .text-slidebar{
@@ -275,6 +268,44 @@ input .form-control:focus {
 .icon-home-wrapper-2 {
   width: 30px;
   height: 50px;
+}
+
+.icon-home .icon-and-text-function {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #7f7f90;
+  transition: color 0.3s ease;
+}
+
+.icon-home .icon-and-text-function::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(0, 137, 34);
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.icon-home .icon-and-text-function:hover::after {
+  width: 100%;
+}
+
+.icon-home .icon-and-text-function:hover {
+  color: rgb(0, 137, 34);
+}
+
+.icon-home .icon-and-text-function:hover .link {
+  color: rgb(4, 163, 44);
+}
+
+.icon-home a{
+  text-align: center;
+  font-weight: 500;
+  color: #7f7f90;
 }
 
 .home-wrapper h6{
@@ -399,6 +430,9 @@ input .form-control:focus {
   word-wrap: break-word; /* Ngăn tiêu đề xuống dòng */
 }
 
+.product-title-name .link {
+  text-decoration: none;
+}
 
 .price {
   font-weight: bolder;
@@ -971,6 +1005,10 @@ input .form-control:focus {
 .review p {
   font-size: 14px;
   color: var(--color-777777);
+}
+
+.product-detail {
+  padding-top: 50px;
 }
 /* Product Detail End */
 

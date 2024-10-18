@@ -6,12 +6,15 @@ a:hover {
 }
 
 .header-upper {
-    background-image: url("https://media.istockphoto.com/id/1385071267/vector/blooming-pink-lotus-flowers-isolated-on-the-white-background.jpg?s=170667a&w=0&k=20&c=GSnhUroecye7SRtHOZP-W5V9M_SWuh_OoXV6SaQyk9E=");
-    background-size: cover;
-    background-position: center;
-    height: 300px;
+    /* background-image: url("https://media.istockphoto.com/id/1385071267/vector/blooming-pink-lotus-flowers-isolated-on-the-white-background.jpg?s=170667a&w=0&k=20&c=GSnhUroecye7SRtHOZP-W5V9M_SWuh_OoXV6SaQyk9E="); */
+    /* background-size: cover;
+    background-position: center; */
+    /* height: 300px; */
+    position: relative;
+    top: 0;
     width: 100%;
     display: flex;
+    z-index: 1000;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -24,14 +27,7 @@ a:hover {
     box-shadow:0 1px 5px rgba(0, 0, 0, 0.5);
     opacity: 10;
 }
-.icon-home a{
-    text-align: center;
-    font-weight: 500;
-    color: rgb(8, 95, 2);
-}
-.icon-on-header-bottom {
-    color: rgb(8, 95, 2); /* hoặc bất kỳ màu nào bạn muốn */
-}
+
 
 footer {
     background-image: url("https://png.pngtree.com/background/20210711/original/pngtree-june-lotus-lotus-poster-background-picture-image_1075415.jpg");
@@ -48,8 +44,6 @@ footer {
     justify-content: space-between;
   }
   
- 
-  
   .footer-img img {
     object-fit: contain; /* Đảm bảo hình ảnh giữ nguyên tỷ lệ */
     height: 250px; /* Đặt chiều cao cho hình ảnh */
@@ -61,5 +55,4 @@ footer {
   a:hover {
     text-decoration: none;
     text-transform: none;
-
   }

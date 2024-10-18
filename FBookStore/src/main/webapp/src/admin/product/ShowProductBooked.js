@@ -127,7 +127,7 @@ export const ShowProductBooked = () => {
                                                 <td className="text-center">{invoice.account.phoneNumber}</td>
                                                 <td className="">{invoice.shipAddress}</td>
                                                 <td className="text-center">{invoice.invoiceDate}</td>
-                                                <td className="text-center">${totalValue(invoice.invoiceItems)}</td>
+                                                <td className="text-center">{totalValue(invoice.invoiceItems)}</td>
                                                 <td className="text-center">
                                                     <Link to={`/Bill/${invoice.invoiceID}`}>
                                                         <Button className="button link button-add-product d-flex">

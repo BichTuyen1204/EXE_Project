@@ -152,7 +152,7 @@ export const ProductCard = ({ listProduct }) => {
                     <div className="product-details">
                       <h5
                         className="product-title product-title-name mt-4 link"
-                        style={{ textOverflow: "ellipsis" }}
+                        style={{ textOverflow: "ellipsis", textDecoration: "none"}}
                       >
                         {product.title}
                       </h5>
