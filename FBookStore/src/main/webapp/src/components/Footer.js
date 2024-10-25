@@ -115,7 +115,7 @@ export const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="icon-footer link">
+                    <a href="https://www.tiktok.com/@tiemchayan" className="icon-footer link">
                       <SiTiktok className="m-2" />
                       TikTok
                     </a>

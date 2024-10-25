@@ -124,7 +124,7 @@ const Edit_Category = () => {
                                         >
                                             Save Changes
                                         </button>
-                                        <Link to={'/Category'} className="btn btn-secondary  me-2">
+                                        <Link to={'/Category'} className="btn btn-secondary link me-2">
                                             Go Back
                                         </Link>
                                     </div>

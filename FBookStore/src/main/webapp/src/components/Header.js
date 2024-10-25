@@ -100,13 +100,13 @@ export const Header = () => {
             >
               {accountName}
             </Dropdown.Item>
-            <Dropdown.Item
+            {/* <Dropdown.Item
               className="link background-icon-person"
               as={Link}
               to="/Product2"
             >
               Admin
-            </Dropdown.Item>
+            </Dropdown.Item> */}
           </DropdownButton>
         );
       } else if (accountRole === "user") {

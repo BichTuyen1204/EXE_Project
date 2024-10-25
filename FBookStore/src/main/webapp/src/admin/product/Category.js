@@ -162,7 +162,7 @@ export const Category = () => {
 
                           <Link
                             to={`/Edit_Category/${cate.idCategory}`}
-                            className="btn btn-success me-2"
+                            className="btn btn-success me-2 link"
                           >
                             Edit
                           </Link>

@@ -304,7 +304,7 @@ export const Cart = () => {
                       <h6 className="">
                         <strong className="">Tổng sản phẩm: </strong> {numberOfBookInCart}
                       </h6>
-                      <Link to="/product" className="button link mt-2">
+                      <Link to="/product" className="button link m-2 text-center">
                         Tiếp tục mua sắm
                       </Link>
                     </div>

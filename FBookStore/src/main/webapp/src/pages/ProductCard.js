@@ -165,7 +165,7 @@ export const ProductCard = ({ listProduct }) => {
                     <p className="price text-dark link">
                       Giá {product.price.toLocaleString()} VND
                     </p>
-                    <p className="quantity link d-block">
+                    <p className="quantity d-block">
                       <strong>Số lượng: </strong>
                       {product.quantity}
                     </p>

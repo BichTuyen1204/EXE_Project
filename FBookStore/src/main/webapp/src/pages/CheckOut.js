@@ -559,7 +559,7 @@ export const CheckOut = () => {
                     </div>
                   ))}
 
-                  <div className="d-flex justify-content-between align-items-center py-4">
+                  <div className="d-flex justify-content-between align-items-center py-2">
                     <h4 className="total">
                       <strong>Tổng: </strong>
                     </h4>
@@ -568,7 +568,7 @@ export const CheckOut = () => {
                     </h5>
                   </div>
 
-                  <div className="d-flex justify-content-between align-items-center py-4">
+                  <div className="d-flex justify-content-between align-items-center py-2">
                     <h4 className="total">
                       <strong>Voucher: </strong>
                     </h4>
@@ -577,7 +577,9 @@ export const CheckOut = () => {
                     </h5>
                   </div>
 
-                  <div className="d-flex justify-content-between align-items-center py-4">
+                  <hr />
+
+                  <div className="d-flex justify-content-between align-items-center py-2">
                     <h4 className="total">
                       <strong>Tổng tiền: </strong>
                     </h4>

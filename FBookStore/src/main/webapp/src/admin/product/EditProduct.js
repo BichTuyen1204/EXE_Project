@@ -357,7 +357,7 @@ const EditProduct = () => {
                                         type="text"
                                         name="price"
                                         placeholder="Enter price"
-                                        value={price}
+                                        value={price.toLocaleString()}
                                         onChange={PriceChange}
                                         onBlur={PriceBlur}
                                         className="form-control"
@@ -429,7 +429,7 @@ const EditProduct = () => {
                                         >
                                             Save Changes
                                         </button>
-                                        <Link to={'/Product2'} className="btn btn-secondary">
+                                        <Link to={'/Product2'} className="btn btn-secondary link">
                                             Go Back
                                         </Link>
                                     </div>

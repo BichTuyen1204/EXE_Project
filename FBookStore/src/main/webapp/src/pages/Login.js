@@ -161,7 +161,7 @@ export const Login = () => {
                     {loginError}
                   </div>
                   <div className="link-forgot-password link">
-                    <Link to="/ForgotPassword">Quân mật khẩu</Link>
+                    <Link to="/ForgotPassword">Quên mật khẩu</Link>
                   </div>
 
                   <div className="d-flex justify-content-center gap-15 align-items-center">
