@@ -28,7 +28,6 @@ export const Signup = () => {
         password: '',
         role: '',
         phoneNumber: ''
-
     });
 
     // Receive re-password

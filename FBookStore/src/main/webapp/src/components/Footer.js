@@ -134,7 +134,7 @@ export const Footer = () => {
                   </li>
                   <li className="address1">
                     <SlEarphonesAlt className="m-2" />
-                    0909 999 999
+                    0999 999 999
                   </li>
                   <li>
                     <IoMail className="m-2" />

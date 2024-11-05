@@ -216,6 +216,7 @@ input .form-control:focus {
   height: 25rem;
   align-items: center;
   justify-items: center;
+  border-radius: 5%;
 }
 
 .main-banner-content {
@@ -250,8 +251,12 @@ input .form-control:focus {
   color: var(--color-FFFFFF);
 }
 
+.small-banner-top {
+  margin-top: 10%;
+}
+
 .small-banner img{
-  width: 310px;
+  width: 150px;
   height: 12rem;
 }
 
@@ -370,7 +375,6 @@ input .form-control:focus {
 .product-card {
   align-items: center;
   justify-items: center;
-  /* padding: 20px; */
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -403,8 +407,6 @@ input .form-control:focus {
   justify-content: center;
   align-items: center;
 }
-
-
 
 .img-product-card-general {
   align-items: center;

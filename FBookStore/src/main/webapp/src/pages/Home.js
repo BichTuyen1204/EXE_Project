@@ -147,7 +147,7 @@ export const Home = () => {
             </div>
 
             {/* Small image */}
-            <div className="smallbanner col-6">
+            <div className="small-banner-top smallbanner col-6 ms-5">
               <div className="d-flex flex-wrap gap-15 justify-content-between align-items-center">
                 <div className="small-banner position-relative">
                   <img src={`http://localhost:8090/${banner1}`} className="img-fluid rounded-3" />
@@ -162,10 +162,10 @@ export const Home = () => {
                   <img src={`http://localhost:8090/${banner3}`} className="img-fluid rounded-3" />
                   <div className="small-banner-content position-absolute"></div>
                 </div>
-                <div className="small-banner position-relative">
+                {/* <div className="small-banner position-relative">
                   <img src={`http://localhost:8090/${banner4}`} className="img-fluid rounded-3" />
                   <div className="small-banner-content position-absolute"></div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
